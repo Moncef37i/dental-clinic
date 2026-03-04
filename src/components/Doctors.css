@@ -1,0 +1,21 @@
+.doctors-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.doctor-card { background: white; border: 1.5px solid var(--border); border-radius: var(--radius-lg); overflow: hidden; transition: var(--transition); display: flex; flex-direction: column; }
+.doctor-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
+.doctor-photo { height: 200px; display: flex; align-items: center; justify-content: center; position: relative; }
+.doctor-avatar { width: 110px; height: 110px; border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 4px solid white; box-shadow: 0 8px 30px rgba(0,0,0,0.15); gap: 2px; transition: transform 0.4s; }
+.doctor-card:hover .doctor-avatar { transform: scale(1.07); }
+.doctor-avatar span:first-child { font-size: 36px; }
+.doctor-initials { font-size: 12px; font-weight: 800; color: white; letter-spacing: 1px; }
+.doctor-exp-badge { position: absolute; top: 16px; right: 16px; background: white; color: var(--cyan-dark); font-size: 11px; font-weight: 700; padding: 5px 12px; border-radius: 50px; box-shadow: var(--shadow-sm); border: 1px solid var(--cyan-light); }
+.doctor-info { padding: 24px; display: flex; flex-direction: column; flex: 1; }
+.doctor-name { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text-dark); margin-bottom: 6px; }
+.doctor-role { font-size: 13px; font-weight: 700; letter-spacing: 0.3px; margin-bottom: 10px; }
+.doctor-edu { font-size: 13px; color: var(--text-mid); margin-bottom: 12px; line-height: 1.5; }
+.doctor-specialties { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.doctor-specialty { font-size: 11px; font-weight: 700; border: 1.5px solid; padding: 3px 10px; border-radius: 50px; }
+.doctor-rating { font-size: 14px; margin-bottom: 18px; display: flex; align-items: center; gap: 8px; }
+.doctor-reviews { font-size: 12px; color: var(--text-light); font-weight: 600; }
+.doctor-btn { width: 100%; background: transparent; border: 1.5px solid; border-radius: 50px; padding: 11px 20px; font-family: var(--font-body); font-size: 13px; font-weight: 700; cursor: pointer; transition: var(--transition); letter-spacing: 0.3px; margin-top: auto; }
+.doctor-btn:hover { background: var(--cyan); border-color: var(--cyan); color: white !important; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(6,182,212,0.3); }
+@media (max-width: 900px) { .doctors-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .doctors-grid { grid-template-columns: 1fr; } }
